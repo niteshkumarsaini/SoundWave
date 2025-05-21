@@ -1,0 +1,217 @@
+.music-player {
+   /* border: 2px solid white; */
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: rgba(20, 20, 20, 0.95);
+    backdrop-filter: blur(10px);
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0px;
+    padding-right:35px;
+    z-index: 999;
+    box-shadow: 0 -2px 20px rgba(0, 0, 0, 0.6);
+    flex-wrap: wrap;
+
+  }
+  
+  .music-details {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    /* border: 2px solid orange; */
+    padding-left: 10px;
+  }
+  
+  .album-art {
+    width: 55px;
+    height: 55px;
+    border-radius: 8px;
+    object-fit: cover;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  }
+  
+  .track-text h4 {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 600;
+  }
+  
+  .track-text p {
+    margin: 3px 0 0;
+    font-size: 0.85rem;
+    color: #aaa;
+  }
+  
+  .music-controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    /* flex-grow: 1; */
+    /* border:2px solid orange; */
+    width: 40vw;
+  }
+  
+  .control-buttons {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    /* border:2px solid white; */
+    font-size: 1.3rem;
+  }
+  
+  .control-buttons svg {
+    cursor: pointer;
+    transition: transform 0.2s ease;
+  }
+  
+  .control-buttons svg:hover {
+    transform: scale(1.15);
+    color: #dee5e8;
+  }
+  
+  .play-pause {
+    background: rgb(47, 142, 180);
+    border: none;
+    color: white;
+    padding: 12px 14px;
+    border-radius: 50%;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    box-shadow: 0 4px 14px rgba(29, 185, 84, 0.5);
+  }
+  
+  .play-pause:hover {
+    transform: scale(1.15);
+  }
+  
+  .progress-container {
+    width: 100%;
+    max-width: 400px;
+    height: 5px;
+    background: #333;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .progress-fill {
+    height: 100%;
+    width: 0%;
+    background: rgb(39, 116, 147);
+    transition: width 1.5s ease-in-out;
+  }
+  
+  .progress-fill.animate {
+    animation: progress-animation 5s linear infinite;
+  }
+  
+  @keyframes progress-animation {
+    0% {
+      width: 0%;
+    }
+    100% {
+      width: 100%;
+    }
+  }
+  
+  .volume-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .volume-controls input[type="range"] {
+    accent-color: rgb(75, 165, 201);
+    width: 100px;
+  }
+  /* Visualizer animation */
+.visualizer {
+    display: flex;
+    gap: 3px;
+    margin-left: 15px;
+    width: 100px;
+    height: 30px;
+    /* border:2px solid white; */
+  }
+  .music-visual-parent{
+    /* border: 2px solid orange; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .visualizer span {
+    display: block;
+    width: 5px;
+    height: 10px;
+    background: rgb(23, 149, 163);
+    border-radius: 2px;
+    animation: none;
+  }
+  
+  .visualizer.active span {
+    animation: bounce 1s infinite ease-in-out;
+  }
+  
+  .visualizer.active span:nth-child(1) {
+    animation-delay: 0s;
+  }
+  .visualizer.active span:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+  .visualizer.active span:nth-child(3) {
+    animation-delay: 0.4s;
+  }
+  .visualizer.active span:nth-child(4) {
+    animation-delay: 0.6s;
+  }
+  
+  @keyframes bounce {
+    0%, 100% {
+      height: 10px;
+    }
+    50% {
+      height: 25px;
+    }
+  }
+  .progress-bar {
+    width: 100%;
+    height: 50px;
+    background-color: #ddd; /* Base track color */
+    border-radius: 3px;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  
+  .progress-fill {
+    height: 100%;
+    width: 0%;
+    background-color: skyblue; /* This makes the fill sky blue */
+    transition: width 0.1s linear;
+  }
+  .progress-bar {
+    width: 100%;
+    height: 10px; /* Increased height */
+    background-color: #444; /* Darker base bar for contrast */
+    border-radius: 5px;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  
+  .progress-fill {
+    height: 100%;
+    width: 0%;
+    background-color: skyblue; /* Fill color */
+    transition: width 0.1s linear;
+  }
+  .progress-fill {
+    height: 100%;
+    width: 0%;
+    background-color: skyblue;
+    transition: width 0.1s linear;
+    border-radius: 5px 0 0 5px;
+  }
+    

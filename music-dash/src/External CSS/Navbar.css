@@ -1,0 +1,224 @@
+/* Root variables */
+:root {
+    --primary-color: rgb(49, 134, 151);
+    --bg-color: rgba(18, 18, 18, 0.9);
+    --text-color: #ffffff;
+    --hover-color: #2ba1b4;
+    --transition: 0.3s ease;
+  }
+  
+  .modern-navbar {
+    width: 100%;
+    height: 70px;
+    /* padding: 0 30px; */
+    /* padding-left: ; */
+    padding-right: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--bg-color);
+    backdrop-filter: blur(12px);
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  }
+  
+  .navbar-brand {
+    display: flex;
+    /* border: 2px solid orange; */
+    padding-left: 10px;
+    align-items: center;
+    color: var(--text-color);
+    font-size: 22px;
+    font-weight: 600;
+    /* border: 2px solid orange; */
+  }
+  
+  .brand-icon {
+    color: var(--primary-color);
+    margin-right: 10px;
+    font-size: 26px;
+  }
+  
+  .navbar-links {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+    /* border: 2px solid orange; */
+  }
+  
+  .navbar-links li a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 500;
+    position: relative;
+    transition: var(--transition);
+  }
+  
+  .navbar-links li a:hover,
+  .navbar-links li a.active {
+    color: var(--hover-color);
+  }
+  
+  .navbar-links li a.active::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    height: 2px;
+    width: 100%;
+    background-color: var(--hover-color);
+    border-radius: 10px;
+    transition: var(--transition);
+  }
+  
+  .navbar-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .profile-icon {
+    font-size: 26px;
+    color: var(--text-color);
+    cursor: pointer;
+    transition: var(--transition);
+    margin-right: 20px;
+  }
+  
+  .profile-icon:hover {
+    color: var(--hover-color);
+  }
+  
+  /* Mobile styles */
+  .menu-toggle {
+    display: none;
+    font-size: 24px;
+    background: none;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .navbar-links {
+      position: absolute;
+      top: 70px;
+      left: 0;
+      background-color: #121212;
+      width: 100%;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px 0;
+      display: none;
+    }
+  
+    .navbar-links.open {
+      display: flex;
+    }
+  
+    .menu-toggle {
+      display: block;
+    }
+  }
+  /* Auth buttons */
+.auth-buttons {
+    display: flex;
+    gap: 10px;
+    /* border: 2px solid white; */
+  }
+  
+  .auth-buttons a {
+    text-decoration: none;
+    font-size: 0.9rem;
+    padding: 6px 14px;
+    border-radius: 20px;
+    transition: var(--transition);
+    font-weight: 500;
+  }
+  
+  .btn-signin {
+    border: 1px solid var(--hover-color);
+    color: var(--hover-color);
+  }
+  
+  .btn-signin:hover {
+    background-color: var(--hover-color);
+    color: white;
+  }
+  
+  .btn-signup {
+    background-color: var(--hover-color);
+    color: white;
+  }
+  
+  .btn-signup:hover {
+    background-color: #2390a0;
+  }
+  
+  /* Profile dropdown */
+  .profile-menu {
+    position: relative;
+  }
+  
+  .dropdown-menu {
+    position: absolute;
+    top: 45px;
+    right: 0;
+    background-color: #1e1e1e;
+    padding: 12px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    width: 180px;
+    
+  }
+  
+  .dropdown-menu a,
+  .dropdown-menu button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    text-decoration: none;
+    padding: 8px 12px;
+    border: none;
+    background: none;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .dropdown-menu a:hover,
+  .dropdown-menu button:hover {
+    background-color: #2a2a2a;
+  }
+  
+  /* Make sure buttons don't lose style */
+  .dropdown-menu button {
+    font-family: inherit;
+  }
+  
+  /* Responsive profile dropdown fix */
+  @media (max-width: 768px) {
+    .auth-buttons {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .dropdown-menu {
+      right: 10px;
+    }
+  }
+  .navbar-links li a.active {
+    color: #00e5ff; /* updated active link color */
+  }
+  
+  .navbar-links li a.active::after {
+    background-color: #00e5ff;
+  }
+  

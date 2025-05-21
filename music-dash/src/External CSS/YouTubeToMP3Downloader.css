@@ -1,0 +1,91 @@
+.ytmp3-container {
+  max-width: 600px;
+  margin: 50px auto;
+  background: #1f1f2e;
+  padding: 30px;
+  border-radius: 12px;
+  text-align: center;
+  color: white;
+  font-family: "Segoe UI", sans-serif;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.ytmp3-container h2 {
+  margin-bottom: 20px;
+}
+
+.ytmp3-container input {
+  width: 70%;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 8px;
+
+  border: none;
+  margin-bottom: 15px;
+}
+.ytmp3-container input::placeholder{
+  text-align: center;
+}
+
+.ytmp3-container button {
+  background: linear-gradient(to right, #6a11cb, #2575fc);
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.ytmp3-container button:disabled {
+  background: #555;
+  cursor: not-allowed;
+}
+
+.ytmp3-container .error {
+  color: red;
+  margin-top: 10px;
+}
+
+.thumbnail-preview {
+  margin-top: 30px;
+}
+
+.thumbnail-preview img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 8px;
+  margin: 10px 0;
+}
+
+.thumbnail-preview a {
+  display: inline-block;
+  margin-top: 8px;
+  background: #0dbb55;
+  padding: 8px 16px;
+  color: white;
+  border-radius: 6px;
+  text-decoration: none;
+}
+.custom-toast {
+  background-color: #1f1f1f !important;
+  color: #ffffff !important;
+  border-radius: 12px !important;
+  box-shadow: 0 0 12px rgba(123, 28, 255, 0.6);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.custom-toast-body {
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.Toastify__progress-bar--success {
+  background: #a855f7 !important;
+}

@@ -1,0 +1,193 @@
+.dashboard-container {
+    display: flex;
+    min-height: 100vh;
+    padding-bottom: 80px;
+    background: linear-gradient(to right, #1e1e1e, #2e2e2e);
+    color: #fff;
+    font-family: 'Segoe UI', sans-serif;
+    margin-top: 50px;
+  }
+  
+  .dashboard-sidebar {
+    width: 250px;
+    background-color: #121212;
+    padding: 20px;
+    border-right: 1px solid #333;
+  }
+  
+  .sidebar-heading {
+    margin-bottom: 20px;
+    color: #ccc;
+    font-size: 1.4rem;
+  }
+  
+  .track-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .track-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background 0.2s ease, transform 0.2s;
+  }
+  
+  .track-item:hover,
+  .track-item.active {
+    background-color: #333;
+    transform: scale(1.02);
+  }
+  
+  .track-cover {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 6px;
+  }
+  
+  .track-meta {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .track-title {
+    font-weight: 600;
+    font-size: 0.95rem;
+    margin: 0;
+  }
+  
+  .track-artist {
+    font-size: 0.8rem;
+    color: #999;
+    margin: 2px 0 0;
+  }
+  
+  .dashboard-main {
+    flex: 1;
+    padding: 40px;
+    padding-top: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .dashboard-heading {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    animation: fadeIn 1s ease;
+  }
+  
+  .now-playing-card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    animation: fadeInUp 0.8s ease;
+  }
+  
+  .now-playing-cover {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  }
+  
+  .now-playing-info {
+    flex: 1;
+  }
+  
+  .now-playing-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #fff;
+    margin: 0 0 8px;
+  }
+  
+  .now-playing-artist {
+    font-size: 1.1rem;
+    color: #ccc;
+    margin-bottom: 20px;
+  }
+  
+  .md-progress-bar {
+    height: 6px;
+    background-color: #333;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 100%;
+  }
+  
+  .md-progress-fill {
+    width: 40%;
+    height: 100%;
+    background: linear-gradient(to right, #4facfe, #00f2fe);
+    animation: progressPulse 3s infinite alternate;
+  }
+  
+  /* Animations */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes progressPulse {
+    0% {
+      width: 30%;
+    }
+    100% {
+      width: 80%;
+    }
+  }
+  
+
+  .btn-add{
+
+  background: linear-gradient(to right, #6a11cb, #2575fc);
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+
+  }
+  .btn-collection{
+     /* background: linear-gradient(to right, #cd5728, #92a194);
+      */
+      background-color: rgb(41, 103, 128);
+  color: white;
+  border: 1px solid white;
+  padding: 12px 20px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+
+  }

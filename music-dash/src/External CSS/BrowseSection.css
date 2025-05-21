@@ -1,0 +1,58 @@
+.browse-section {
+    /* padding:  30px; */
+    background-color: #0f0f0f;
+    color: #fff;
+    height: 89vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .browse-title {
+    font-size: 32px;
+    margin-bottom: 80px;
+    font-weight: bold;
+    text-align: center;
+    color: #ffffff;
+  }
+  
+  .browse-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+  }
+  
+  .browse-card {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    height: 200px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  }
+  
+  .browse-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .browse-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.4;
+    transition: opacity 0.3s ease;
+  }
+  
+  .browse-info {
+    position: absolute;
+    bottom: 15px;
+    left: 20px;
+    z-index: 2;
+  }
+  
+  .browse-info h3 {
+    font-size: 20px;
+    color: #fff;
+  }
+  
